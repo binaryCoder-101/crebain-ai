@@ -21,7 +21,7 @@ More capabilities, including persistent research history, document-based retriev
 
 Crebain AI uses a graph-based workflow to coordinate its research process.
 
-
+```mermaid
 flowchart TD
     START([Start]) --> SUP["Supervisor"]
     SUP --> SEARCH["Search Agent"]
@@ -39,7 +39,7 @@ flowchart TD
     class SUP,SEARCH,ANALYST,WRITER process
     class QC decision
     class START,END terminal
-
+```
 
 The workflow follows these stages:
 
