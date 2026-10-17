@@ -22,15 +22,15 @@ More capabilities, including persistent research history, document-based retriev
 Crebain AI uses a graph-based workflow to coordinate its research process.
 
 ```mermaid
-flowchart TD
-    START([Start]) --> SUP["Supervisor"]
-    SUP --> SEARCH["Search Agent"]
-    SEARCH --> ANALYST["Analyst"]
-    ANALYST --> WRITER["Report Writer"]
-    WRITER --> QC{"Quality Checker"}
+flowchart LR
+    START([Start]) --> SUP[Supervisor]
+    SUP --> SEARCH[Search Agent]
+    SEARCH --> ANALYST[Analyst]
+    ANALYST --> WRITER[Report Writer]
+    WRITER --> QC{Quality Checker}
 
-    QC -->|Needs revision| WRITER
-    QC -->|Passes quality checks| END([End])
+    QC -->|Pass| END([End])
+    QC -->|Revise| WRITER
 
     classDef process fill:#20242c,stroke:#737b8c,color:#f4f4f5,stroke-width:1.5px
     classDef decision fill:#342a49,stroke:#a78bfa,color:#f5f3ff,stroke-width:1.5px
